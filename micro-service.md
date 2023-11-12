@@ -26,6 +26,9 @@ Services communicate via APIs with lightweight protocols, e.g. HTTP (for perform
 ## Pros
 
 - The modularity they provide allows for individual components to be scaled independently to match demand/resource needs.
+- Since different teams maintain different components they are free to implement them however they see fit, this leads to more diversity, innovation, and agility.
+- Each component has a smaller codebase, and so it is easier to add new features without unforseen consequences.
+- It is possible to handle faults in services, i.e. isolate them so that the entire application is not impacted.
 
 ## Cons
 
@@ -38,6 +41,8 @@ The typical example of where a micro-service architecture can be used, is to rep
 In the monolith paradigm all code is deployed as a single "block", that is, all processes are run as a single service. This is a reasonable thing to do when only a single team is responsible for the monolith, but with more teams there may be conflict, and so development/innovation slows down.Additionally, if there is a sudden spike in a single application of the monolith, to meet demand the whole architecture has to scale.
 
 One solution would be to break the monolith into different components, each of which run a singular application process as a service. Thus solving the main issue of a monolith, scaling.
+
+This seems to be the direction cloud hosted services are trying to push software development, and it seems to be pretty popular with [this article](https://www.meritdata-tech.com/resources/whitepaper/digital-engineering-solutions/microservices-architecture-docker-kubernetes/) claiming that Docker (a service that is used to develop software in "containers") has "Top-notch community support".
 
 # References
 https://aws.amazon.com/microservices/ <br>
