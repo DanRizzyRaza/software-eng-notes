@@ -19,15 +19,15 @@ It is an approach to software development where the project is composed of small
 
 ## What is a service
 
-Each service is an idmicr
+A microservice is a self-contained unit with its own "model" (cf. MVC model), that is, its own business logic and data storage. That is, each service has an entirely seperate codebase and are responsible for persisting their own data/external state: typically this means they have their own databases, note that this adds in the danger of service interactions accidentally changing state, this should not be an issue with proper APIs.
 
+Services communicate via APIs with lightweight protocols, e.g. HTTP (for performance and maintenance reasons).
 
+## Pros
 
+- The modularity they provide allows for individual components to be scaled independently to match demand/resource needs.
 
-
-# Pros
-
-# Cons
+## Cons
 
 # Diagram
 
@@ -37,7 +37,7 @@ The typical example of where a micro-service architecture can be used, is to rep
 
 In the monolith paradigm all code is deployed as a single "block", that is, all processes are run as a single service. This is a reasonable thing to do when only a single team is responsible for the monolith, but with more teams there may be conflict, and so development/innovation slows down.Additionally, if there is a sudden spike in a single application of the monolith, to meet demand the whole architecture has to scale.
 
-One solution would be to break the monolith into different components, each of which run a singular application process as a service: each of which has a particular business function. Thus solving the main issue of a monolith, scaling.
+One solution would be to break the monolith into different components, each of which run a singular application process as a service. Thus solving the main issue of a monolith, scaling.
 
 # References
 https://aws.amazon.com/microservices/ <br>
