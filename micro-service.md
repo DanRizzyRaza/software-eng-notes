@@ -39,8 +39,6 @@ Services communicate via APIs with lightweight protocols, e.g. HTTP (for perform
 - Since each team has so much freedom there is the chance too many languages/frameworks are used which can hurt maintainability in the future. And solving this requires more standards which is added complexity.
 - Each component interacting with others can lead to network congestion and increased latency (when servies call other services that call other services).
 
-# Diagram
-
 # Why we would use it instead of a monolith architecture
 
 The typical example of where a micro-service architecture can be used, is to replace a monolith architecture.
@@ -50,6 +48,8 @@ In the monolith paradigm all code is deployed as a single "block", that is, all 
 One solution would be to break the monolith into different components, each of which run a singular application process as a service. Thus solving the main issue of a monolith, scaling.
 
 This seems to be the direction cloud hosted services are trying to push software development, and it seems to be pretty popular with [this article](https://www.meritdata-tech.com/resources/whitepaper/digital-engineering-solutions/microservices-architecture-docker-kubernetes/) claiming that Docker (a service that is used to develop software in "containers") has "Top-notch community support".
+
+![image](https://github.com/DanRizzyRaza/software-eng-notes/assets/146075000/5cf277a5-8daf-410a-9afe-d18f58431e72)
 
 # References
 https://aws.amazon.com/microservices/ <br>
