@@ -25,12 +25,19 @@ Services communicate via APIs with lightweight protocols, e.g. HTTP (for perform
 
 ## Pros
 
-- The modularity they provide allows for individual components to be scaled independently to match demand/resource needs.
-- Since different teams maintain different components they are free to implement them however they see fit, this leads to more diversity, innovation, and agility.
+- The modularity they provide allows for individual components to be scaled independently to match demand/resource needs. There exists "orchestrators", these coordinate the execution of multiple services and can enable them to work more efficiently (e.g., holding more services on a single host).
+- Since different teams maintain different components they are free to implement them however they see fit, this leads to more diversity, innovation, and agility. Through continuous integration and deployment practices.
 - Each component has a smaller codebase, and so it is easier to add new features without unforseen consequences.
-- It is possible to handle faults in services, i.e. isolate them so that the entire application is not impacted.
+- It is possible to handle faults in services, i.e. isolate them so that the entire application is not impacted or times out.
+- Although complie time of the whole software will be unaffected by the chosen architecture, since each service has smaller codebases they will compile faster.
 
 ## Cons
+
+- Clearly, more software (and perhaps middle men) will be required since there are more moving parts, e.g. for the APIs. Teams will also need the skillset to successfully pull off this architecture.
+- Data inconsistency since each service maintains it's own state.
+- Testing is more difficult, especially if you're testing how componenets interact, another service may be changing rapidly causing unexpected behaviour.
+- Since each team has so much freedom there is the chance too many languages/frameworks are used which can hurt maintainability in the future. And solving this requires more standards which is added complexity.
+- Each component interacting with others can lead to network congestion and increased latency (when servies call other services that call other services).
 
 # Diagram
 
