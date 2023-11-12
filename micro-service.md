@@ -17,6 +17,12 @@ It is an approach to software development where the project is composed of small
   And since programs communicate via an API, when the programs are further developed the changes should not impact the API, this makes maintenance easier.
 </details>
 
+## What is a service
+
+Each service is an idmicr
+
+
+
 
 
 # Pros
@@ -27,10 +33,13 @@ It is an approach to software development where the project is composed of small
 
 # Why we would use it instead of a monolith architecture
 
-The typical example of where a micro-service architecture can be used, is to replae a monolith architecture.
+The typical example of where a micro-service architecture can be used, is to replace a monolith architecture.
 
 In the monolith paradigm all code is deployed as a single "block", that is, all processes are run as a single service. This is a reasonable thing to do when only a single team is responsible for the monolith, but with more teams there may be conflict, and so development/innovation slows down.Additionally, if there is a sudden spike in a single application of the monolith, to meet demand the whole architecture has to scale.
 
+One solution would be to break the monolith into different components, each of which run a singular application process as a service: each of which has a particular business function. Thus solving the main issue of a monolith, scaling.
+
 # References
 https://aws.amazon.com/microservices/ <br>
-https://aws.amazon.com/what-is/api/
+https://aws.amazon.com/what-is/api/ <br>
+https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
