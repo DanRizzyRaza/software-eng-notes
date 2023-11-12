@@ -4,11 +4,13 @@ It is an approach to software development where the project is composed of small
 
 <details>
   <summary>What is an API</summary>
-  ## Application programming interface
+  
+  ### Application programming interface
   
   A a mechanism that enables two software components to communicate via a well defined set of definitions and protocols.
 
   **Application** stands for any software with a distinct function
+  
   **Interface** is the set of definitions and protocols, i.e., how two components are contracted to communicate with eachother using requests and responses
 
   They are useful as a means of abstraction, as they allow a developer to use features/data from a service, application, or platform without any knowledge of the system.
